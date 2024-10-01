@@ -1,6 +1,12 @@
 // SelectionAndRepetitionProjects.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Merges two pre-sorted input files into one sorted output file.
+// Reads lines from both, compares, and writes in order.
+// Remaining lines from either file are appended.
 //
+// Input: Two sorted files.
+// Output: Merged sorted file.
 //
+// Programmer: Aslihan Celik
 
 #include <iostream>
 #include <fstream>
