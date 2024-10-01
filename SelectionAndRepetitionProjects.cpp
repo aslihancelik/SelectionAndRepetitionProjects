@@ -1,5 +1,6 @@
 // SelectionAndRepetitionProjects.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // 
+// Nested if Implementation:
 // This program mimics a simple calculator. It takes two integers and an operator as input from the user
 // and performs the specified arithmetic operation (+, -, *, /). The user can also choose to exit the program
 // by typing "exit". If the input format is incorrect, the program prompts the user to try again or exit.
