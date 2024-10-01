@@ -51,17 +51,16 @@ int main()
 
             //check if entered correct
 
-            switch (operatorSelected) {
-            case '+':
+            if (operatorSelected == '+') {
                 cout << number1 << " + " << number2 << " = " << number1 + number2 << endl;
-                break;
-            case '-':
+            }
+            else if (operatorSelected == '-') {
                 cout << number1 << " - " << number2 << " = " << number1 - number2 << endl;
-                break;
-            case '*':
+            }
+            else if (operatorSelected == '*') {
                 cout << number1 << " * " << number2 << " = " << number1 * number2 << endl;
-                break;
-            case '/':
+            }
+            else if (operatorSelected == '/') {
                 //check the denominator, it shouldn't be zero
                 if (number2 != 0) {
                     cout << number1 << " / " << number2 << " = " << number1 / number2 << endl;
@@ -69,10 +68,9 @@ int main()
                 else {
                     cout << "Error: Division by zero is undefined." << endl;
                 }
-                break;
-            default:
+            }
+            else{
                 cout << " Error: Unknown operator.";
-                break;
             }
         }
         else {
