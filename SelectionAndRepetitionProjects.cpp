@@ -44,33 +44,25 @@ void mergeFiles(const string& file1, const string& file2, const string& outputFi
             getline(inFile2, input2);   // Read next line from file2
         }
     }
+
     
     // Write remaining lines from file1 if any
-    while (!(inFile1.eof())) {
-
-        outFile << input1 << endl; // Write the current line
-        getline(inFile1, input1);   // Read next line
-
-        //make sure the  last read is written into the output file
-        if (inFile1.eof()) {
-            outFile << input1 << endl;
+    if (inFile1) {
+        outFile << input1 << endl; // Write the last read line
+        while (getline(inFile1, input1)) {
+            outFile << input1 << endl; // Write the current line
         }
-
     }
-
+    
  
-    // Write remaining lines from file2 if any
-    while (!(inFile2.eof())) {
-        
-        outFile << input2 << endl; // Write the current line
-        getline(inFile2, input2);   // Read next line
-
-        //make sure the  last read is written into the output file
-        if (inFile2.eof()) {
-            outFile << input2 << endl;
+    // Write remaining lines from file1 if any
+    if (inFile2) {
+        outFile << input2 << endl; // Write the last read line
+        while (getline(inFile2, input2)) {
+            outFile << input2 << endl; // Write the current line
         }
-        
     }
+
 
     // Close all files
     inFile1.close();
